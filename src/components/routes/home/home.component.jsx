@@ -1,6 +1,6 @@
-import Directory from "./components/directory/directory.component";
+import { Outlet } from "react-router-dom";
 
-const App = () => {
+const Home = () => {
   const categories = [
     {
       id: 1,
@@ -29,12 +29,12 @@ const App = () => {
     },
   ];
 
-  return <Directory categories={categories} />;
+  return (
+    <div>
+      Hello world
+      <Outlet />
+    </div>
+  );
 };
 
-export default App;
-/* <Routes>
-      <Route path="/" element={<Navigation />}>
-        <Route index element={<Home />}></Route>
-      </Route>
-    </Routes> */
+export default Home;
